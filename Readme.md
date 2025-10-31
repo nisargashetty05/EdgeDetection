@@ -147,7 +147,7 @@ opencv.org.
  Pictures 
 →
  EdgeDetection .
- 🎯 Key Component Overview
+ 🎯 Key  Component Overview
  File
  MainActivity.k
  t
