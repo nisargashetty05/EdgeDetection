@@ -57,7 +57,7 @@ Java_com_example_edgedetectionapp_NativeProcessor_processFrame(
         // Copy to output
         memcpy(outputBytes, resultMat.data, resultMat.total() * resultMat.elemSize());
 
-        // Release arrays
+       
         env->ReleaseByteArrayElements(input, inputBytes, JNI_ABORT);
         env->ReleaseByteArrayElements(output, outputBytes, 0);
 
