@@ -8,7 +8,7 @@
 #define TAG "NativeProcessor"
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
 
-extern "C" JNIEXPORT jstring JNICALL
+extern  "C" JNIEXPORT jstring JNICALL
 Java_com_example_edgedetectionapp_NativeProcessor_testOpenCV(
         JNIEnv* env,
         jobject /* this */) {
