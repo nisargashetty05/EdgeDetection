@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Detection App - Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Real-Time Edge Detection App</h1>
+            <p class="subtitle">Android + OpenCV + Camera2 API</p>
+        </header>
+
+        <section class="info-card">
+            <h2>📱 Application Overview</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Platform:</span>
+                    <span class="value">Android (API 24+)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Language:</span>
+                    <span class="value">Kotlin + C++</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Processing:</span>
+                    <span class="value">OpenCV 4.10.0</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Resolution:</span>
+                    <span class="value">640x480</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Algorithm:</span>
+                    <span class="value">Canny Edge Detection</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Performance:</span>
+                    <span class="value">20-30 FPS</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>🏗️ Architecture</h2>
+            <div class="architecture">
+                <div class="arch-layer">
+                    <h3>Camera Layer</h3>
+                    <p>Camera2 API captures YUV_420_888 frames at 640x480</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3>JNI Bridge</h3>
+                    <p>Passes frame data from Kotlin to C++</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3>OpenCV Processing</h3>
+                    <p>Gaussian Blur → Canny Edge Detection (50, 150)</p>
+                </div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-layer">
+                    <h3>Display Layer</h3>
+                    <p>ImageView renders processed RGB bitmap</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>🔧 Technologies Used</h2>
+            <ul class="tech-list">
+                <li><strong>Android SDK:</strong> Kotlin, Camera2 API, NDK</li>
+                <li><strong>OpenCV:</strong> 4.10.0 for Android with JNI bindings</li>
+                <li><strong>Build System:</strong> Gradle with CMake</li>
+                <li><strong>Native Code:</strong> C++17 with OpenCV C++ API</li>
+                <li><strong>Web Viewer:</strong> TypeScript + HTML5</li>
+            </ul>
+        </section>
+
+        <section class="info-card">
+            <h2>⚡ Performance Metrics</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-value">20-30</div>
+                    <div class="metric-label">FPS</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">3-5</div>
+                    <div class="metric-label">ms Processing</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">640×480</div>
+                    <div class="metric-label">Resolution</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <h2>📸 Sample Output</h2>
+            <div class="sample-container">
+                <img src="sample_edge.png" alt="Edge Detection Sample" id="sampleImage">
+                <p class="sample-note">Real-time Canny edge detection output</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with ❤️ using Android, OpenCV, and TypeScript</p>
+            <p class="timestamp" id="timestamp"></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
